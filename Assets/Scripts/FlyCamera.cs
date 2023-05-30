@@ -31,7 +31,7 @@ public class FlyCamera : MonoBehaviour {
         //Keyboard commands
         float f = 0.0f;
         Vector3 p = GetBaseInput();
-        if (p.sqrMagnitude > 0) { // only move while a direction key is pressed
+        if (p.sqrMagnitude > 0) { // Only move while a direction key is pressed
             if (Input.GetKey(KeyCode.LeftShift)) {
                 totalRun += Time.deltaTime;
                 p = p * totalRun * shiftAdd;
