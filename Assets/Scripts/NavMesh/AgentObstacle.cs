@@ -7,8 +7,7 @@ public class AgentObstacle : MonoBehaviour {
     public float displacement = 3f;
     float pingpong;
     float height;
-
-
+    
     void Start() {
         height = transform.position.y;
     }

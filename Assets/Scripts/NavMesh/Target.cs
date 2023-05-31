@@ -6,11 +6,6 @@ public class Target : MonoBehaviour {
     [Range(0,1)]
     public int mouseButtonIndex = 0;
 
-
-    void Start() {
-
-    }
-
     void Update() {
         if (Input.GetMouseButtonDown(mouseButtonIndex)) {
             RaycastHit hitData;

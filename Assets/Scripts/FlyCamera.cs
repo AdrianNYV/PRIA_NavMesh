@@ -58,17 +58,29 @@ public class FlyCamera : MonoBehaviour {
 
     private Vector3 GetBaseInput() { //returns the basic values, if it's 0 than it's not active.
         Vector3 p_Velocity = new Vector3();
-        if (Input.GetKey(KeyCode.W)) {
+        //Zoom In
+        if (Input.GetKey(KeyCode.Q)) {
             p_Velocity += new Vector3(0, 0, 1);
         }
-        if (Input.GetKey(KeyCode.S)) {
+        //Zoom Out
+        if (Input.GetKey(KeyCode.E)) {
             p_Velocity += new Vector3(0, 0, -1);
         }
-        if (Input.GetKey(KeyCode.A)) {
+        //Move To The Left
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
             p_Velocity += new Vector3(-1, 0, 0);
         }
-        if (Input.GetKey(KeyCode.D)) {
+        //Move To The Right
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
             p_Velocity += new Vector3(1, 0, 0);
+        }
+        //Move Up
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
+            p_Velocity += new Vector3(0, 1, 0);
+        }
+        //Move Down
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+            p_Velocity += new Vector3(0, -1, 0);
         }
         return p_Velocity;
     }
